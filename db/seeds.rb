@@ -14,7 +14,7 @@
    first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')
    second_post = Post.create(author: second_user, title: 'I am changing the world!', text: 'This is my second post')
    third_post = Post.create(author: second_user, title: 'Coding in progress', text: 'One line at a time')
-   fourth_post = post.create(author: first_user, title: 'Show love', text: 'You cant love too much')
+   fourth_post = Post.create(author: first_user, title: 'Show love', text: 'You cant love too much')
 
     # create comments
     Comment.create(post: first_post, author: second_user, text: 'Hi Tom!' )
