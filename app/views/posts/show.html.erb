@@ -1,1 +1,7 @@
-<h1>Display a selected post</h1>
+<% if @post.blank? %>
+    <h2>No valid post selected</h2>
+<% else %>
+    <section id="post-detail">
+        <%= render 'shared/post_item', post: @post, comments: @post.comments, headed: true %>
+    </section>
+<% end %>

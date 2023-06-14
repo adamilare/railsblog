@@ -1,1 +1,20 @@
-<h1>List all posts for a user</h1>
+<% if @user.blank? %>
+    <h2>No valid user selected</h2>
+<% else %>
+    <section id="user-detail">
+        <%= render 'shared/user_item', user: @user %>
+        <% if @posts.blank? %>   
+            <p class="no-posts"><%= @user.name%> has no post yet.</p>
+        <% else %>
+            <ul class="ul-none items">
+                <% @user.recent_posts.each do |post|%>
+                    <a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list">
+                        <%= render 'shared/post_item', post: post, comments: post.recent_comments %>
+                    </a>
+                <% end %>
+            </ul>
+        
+        <% end %>
+    <button class="btn-see-all">Pagination</button>
+    </section>
+<% end %>

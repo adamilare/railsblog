@@ -1,1 +1,11 @@
-<h1>List all users</h1>
+<% if @users != nil %>
+<section id="users-list">
+    <% @users.each do |user|%>
+        <a href="/users/<%= user.id %>" class="a-list">
+            <%= render 'shared/user_item', user: user %>
+        </a>
+    <% end %>
+</section>
+<% else %>
+<h1>No user in the list, please add users</h1>
+<% end%>

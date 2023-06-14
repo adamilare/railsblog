@@ -1,0 +1,35 @@
+
+<li class="post-item">
+    <div class="post-header">
+        <div class="left">
+            <h3><%= post.title%></h3>
+
+            <% if defined?(headed) %>
+                <span> by </span>
+                <span><%= post.author.name %> </span>                        
+            </div>
+            
+            <div class="interaction">
+                <span>Comments: <%= post.comments_counter%></span>
+                <span>Likes: <%= post.likes_counter%></span>
+            </div> 
+            <% else %>
+                </div>
+            <% end %>
+    </div>
+    <p><%= post.text%></p> 
+    <% unless defined?(headed) %>
+        <div class="interaction">
+            <span>Comments: <%= post.comments_counter%></span>
+            <span>Likes: <%= post.likes_counter%></span>
+        </div> 
+    <% end %>
+    <% if defined?(comments) && !comments.blank?%>
+        <hr>
+        <ul class="ul-none comments">
+            <% comments.each do |comment| %>
+                <li><span><%= comment.author.name %>: <%= comment.text%></li>
+            <% end %>
+        </ul>
+    <% end%>
+</li>
