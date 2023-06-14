@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   private
 
   def record_not_found
-    flash[:error] = "User not found"
+    flash[:error] = 'User not found'
     redirect_to root_url
   end
 end
