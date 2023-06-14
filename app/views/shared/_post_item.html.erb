@@ -1,0 +1,18 @@
+<a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list">
+    <li class="post-item">
+            <h3><%= post.title%></h3>
+            <p><%= post.text%></p>
+            <div class="interaction">
+                <span>Comments: <%= post.comments_counter%></span>
+                <span>Likes: <%= post.likes_counter%></span>
+            </div>
+        <% if defined?(comments) && !comments.blank?%>
+            <hr>
+            <ul class="ul-none comments">
+                <% comments.each do |comment| %>
+                    <li><span><%= comment.author.name %>: <%= comment.text%></li>
+                <% end %>
+            </ul>
+        <% end%>
+    </li>
+</a>

@@ -1,5 +1,19 @@
 class UsersController < ApplicationController
-  def index; end
+  rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
 
-  def show; end
+  def index
+    @users = User.all
+  end
+
+  def show
+    @user = User.find(params[:id])
+    @posts = @user.posts
+  end
+
+  private
+
+  def record_not_found
+    flash[:error] = "User not found"
+    redirect_to root_url
+  end
 end
