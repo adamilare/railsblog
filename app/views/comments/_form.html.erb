@@ -1,0 +1,4 @@
+<%= form_with model: @comment, method: :post, url: "/users/#{post.author.id}/posts/#{post.id}/comments", scope: "comment" do |form| %>
+    <%= form.text_field :text, placeholder: "Add a comment...", class: "comment-text" %>
+    <%= form.submit "Add" %>
+<% end %>

@@ -27,9 +27,6 @@
         </ul>
     <% end%>
     <div class="add-comment" id="comment-form-<%= post.id %>">
-        <%= form_with model: @comment, method: :post, url: "/users/#{post.author.id}/posts/#{post.id}/comments", scope: 'comment' do |form| %>
-            <%= form.text_field :text, placeholder: "Add a comment...", class: "comment-text" %>
-            <%= form.submit "Add" %>
-        <% end %>
+        <%= render 'comments/form', comment: @comment, post: post%>
   </div>
 </li>
