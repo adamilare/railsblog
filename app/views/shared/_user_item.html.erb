@@ -1,3 +1,6 @@
+<% if defined?(new_post) && new_post %>
+    <button onclick="window.location.href ='/users/<%=@user.id%>/posts/new'" class='btn-new-post' >Create New Post</button>
+<% end %>
 <div class="user-item">
     <img src=<%= user.photo%> alt= <%= user.name%> />
     <div class="user-info">

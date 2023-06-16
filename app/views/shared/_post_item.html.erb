@@ -9,20 +9,14 @@
                 <span><%= post.author.name %> </span>                        
             </div>
             
-            <div class="interaction">
-                <span>Comments: <%= post.comments_counter%></span>
-                <span>Likes: <%= post.likes_counter%></span>
-            </div> 
+            <%= render 'shared/interaction', post: post %> 
             <% else %>
                 </div>
             <% end %>
     </div>
     <p><%= post.text%></p> 
     <% unless defined?(headed) %>
-        <div class="interaction">
-            <span>Comments: <%= post.comments_counter%></span>
-            <span>Likes: <%= post.likes_counter%></span>
-        </div> 
+        <%= render 'shared/interaction', post: post %>
     <% end %>
     <% if defined?(comments) && !comments.blank?%>
         <hr>
@@ -32,4 +26,10 @@
             <% end %>
         </ul>
     <% end%>
+    <div class="add-comment" id="comment-form-<%= post.id %>">
+        <%= form_with model: @comment, method: :post, url: "/users/#{post.author.id}/posts/#{post.id}/comments", scope: 'comment' do |form| %>
+            <%= form.text_field :text, placeholder: "Add a comment...", class: "comment-text" %>
+            <%= form.submit "Add" %>
+        <% end %>
+  </div>
 </li>
