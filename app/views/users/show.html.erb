@@ -1,8 +1,10 @@
+<%= javascript_importmap_tags %>
+
 <% if @user.blank? %>
     <h2>No valid user selected</h2>
 <% else %>
-    <section id="user-detail">
-        <%= render 'shared/user_item', user: @user %>
+    <section id="user-detail" data-controller='interactions'>
+        <%= render 'shared/user_item', user: @user, new_post: true %>
         <div class="bio">
             <span>Bio</span>
             <p><%= @user.bio %></p>
@@ -12,7 +14,7 @@
         <% else %>
             <ul class="ul-none items">
                 <% @user.recent_posts.each do |post|%>
-                    <a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list">
+                    <a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list" data-action="click->interactions#clicked">
                         <%= render 'shared/post_item', post: post, comments: post.recent_comments %>
                     </a>
                 <% end %>
