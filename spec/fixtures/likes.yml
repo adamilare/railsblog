@@ -1,0 +1,11 @@
+like_1:
+  post: first_post
+  author: first_user
+
+like_2:
+  post: first_post
+  author: second_user
+
+like_3:
+  post: second_post
+  author: first_user

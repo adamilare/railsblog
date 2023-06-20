@@ -6,7 +6,7 @@ class CommentsController < ApplicationController
 
     if @comment.save
       flash[:success] = 'Comment added successfully!'
-      redirect_to request.referrer
+      redirect_to request.referrer, notice: "Comment added successfully "
     else
       flash.now[:error] = 'comment creation failed!'
     end

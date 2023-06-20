@@ -1,0 +1,29 @@
+comment_1:
+  post: first_post
+  author: second_user
+  text: Hi Tom!
+
+comment_2:
+  post: first_post
+  author: first_user
+  text: Hi Lilly!
+
+comment_3:
+  post: first_post
+  author: second_user
+  text: Hope you all done with your project?
+
+comment_4:
+  post: first_post
+  author: second_user
+  text: I asked after you from Ebun yesterday
+
+comment_5:
+  post: first_post
+  author: first_user
+  text: Oh, really, thanks.
+
+comment_6:
+  post: first_post
+  author: second_user
+  text: I am almost done with the project

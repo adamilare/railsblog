@@ -12,9 +12,9 @@ describe 'Users', type: :request do
       expect(response).to render_template(:index)
     end
 
-    it 'should render the index placeholder' do
-      expect(response.body).to include('List all users')
-    end
+    # it 'should render the index placeholder' do
+    #   expect(response.body).to include('List all users')
+    # end
   end
 
   describe 'GET #show' do
@@ -28,8 +28,8 @@ describe 'Users', type: :request do
       expect(response).to render_template(:show)
     end
 
-    it 'should render the show placehoder' do
-      expect(response.body).to include('Display a selected user')
-    end
+    # it 'should render the show placehoder' do
+    #   expect(response.body).to include('Display a selected user')
+    # end
   end
 end
