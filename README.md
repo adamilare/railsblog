@@ -8,7 +8,6 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -26,7 +25,7 @@
 
 # 📖 Rails-blog-app <a name="about-the-project"></a>
 
-**Railsblog** is an app built on Ruby-on-Rails with functionalitis to interact with post objects; create and list posts, add comments and likes. The goal of the project is to demonstrate the basic development using RoR, as part of Microverse training modules.
+**Railsblog** is an app built on Ruby-on-Rails with functionalities to interact with post objects; create and list posts, add comments and likes. The goal of the project is to demonstrate the basic development using RoR, as part of Microverse training modules.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -61,11 +60,7 @@
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 🚀 Live Demo <a name="live-demo"></a>
 
-- N/A
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -114,9 +109,6 @@ To run all tests, including unit and integration tests, run the following comman
 
 You can deploy this project using:
 
-```
-  N/A
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -129,6 +121,13 @@ You can deploy this project using:
 - Twitter: [@twitterhandle](https://twitter.com/mailtodare)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/damilareadepoju)
 - GitUp Page: [My Page](https://adamilare.github.io/)
+
+👤 **Damilare Adepoju**
+
+- GitHub: [@PowerLevel9000](https://github.com/PowerLevel9000)
+- Twitter: [@PowerLevel9002](https://twitter.com/mailtodare)
+- LinkedIn: [Adarsh Pathak](https://linkedin.com/in/powerlevel9002)
+- GitUp Page: [Portfolio Page](https://powerlevel9000.github.io/portfolio-project/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
