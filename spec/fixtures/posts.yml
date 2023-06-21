@@ -1,0 +1,19 @@
+first_post:
+  author: first_user
+  title: Hello
+  text: This is my first post
+
+second_post:
+  author: first_user
+  title: I am changing the world!
+  text: This is my second post
+
+third_post:
+  author: first_user
+  title: Coding in progress
+  text: One line at a time
+
+fourth_post:
+  author: first_user
+  title: Show love
+  text: You cant love too much

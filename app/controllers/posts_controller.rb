@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = Post.includes(:comments).find(params[:id])
     @comments = @post.comments
   end
 
@@ -22,9 +22,8 @@ class PostsController < ApplicationController
       format.html do
         if @post.save
           flash[:success] = 'Post created successfully!'
-          redirect_to user_posts_url(@user)
+          redirect_to user_posts_url(@user), notice: 'Post created successfully'
         else
-          puts 'Error post not created'
           flash.now[:error] = 'Error: Post not created!'
           render :new
         end
@@ -35,7 +34,7 @@ class PostsController < ApplicationController
   private
 
   def selected_user
-    User.find(params[:user_id])
+    User.includes(:posts, :comments).find(params[:user_id])
   end
 
   def post_params

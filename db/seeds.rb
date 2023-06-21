@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 
    # create users
-   first_user = User.create(name: 'Tom', photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a', bio: 'Teacher from Mexico.')
-   second_user = User.create(name: 'Lilly', photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330', bio: 'Teacher from Poland.')
+   first_user = User.create(name: 'Tom', photo: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=280', bio: 'Teacher from Mexico.')
+   second_user = User.create(name: 'Lilly', photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=280', bio: 'Teacher from Poland.')
 
    # create posts
    first_post = Post.create(author: first_user, title: 'Hello', text: 'This is my first post')

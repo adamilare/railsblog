@@ -1,0 +1,9 @@
+first_user:
+  name: Tom
+  photo: https://images.unsplash.com/photo-1560250097-0b93528c311a?w=280
+  bio: Teacher from Mexico.
+
+second_user:
+  name: Lilly
+  photo: https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=280
+  bio: Teacher from Poland.
