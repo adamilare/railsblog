@@ -1,8 +1,8 @@
 require 'rails_helper'
 
-describe 'Users', type: :request do
+RSpec.describe 'Users', type: :request do
   describe 'GET #index' do
-    before(:example) { get users_url }
+    before { get users_url }
 
     it 'successfull request' do
       expect(response.status).to eq(200)
@@ -12,14 +12,16 @@ describe 'Users', type: :request do
       expect(response).to render_template(:index)
     end
 
-    # it 'should render the index placeholder' do
-    #   expect(response.body).to include('List all users')
-    # end
+    it 'should render the index placeholder' do
+      expect(response.body).not_to include('List all users')
+    end
   end
 
   describe 'GET #show' do
-    before(:example) { get user_url(1) }
-
+    before do
+      user = User.first
+      get user_path(user)
+    end
     it 'successful request' do
       expect(response.status).to eq(200)
     end
@@ -28,8 +30,8 @@ describe 'Users', type: :request do
       expect(response).to render_template(:show)
     end
 
-    # it 'should render the show placehoder' do
-    #   expect(response.body).to include('Display a selected user')
-    # end
+    it 'should render the show placehoder' do
+      expect(response.body).not_to include('Display a selected user')
+    end
   end
 end
