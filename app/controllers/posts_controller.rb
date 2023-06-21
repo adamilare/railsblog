@@ -22,7 +22,7 @@ class PostsController < ApplicationController
       format.html do
         if @post.save
           flash[:success] = 'Post created successfully!'
-          redirect_to user_posts_url(@user), notice: "Post created successfully"
+          redirect_to user_posts_url(@user), notice: 'Post created successfully'
         else
           flash.now[:error] = 'Error: Post not created!'
           render :new

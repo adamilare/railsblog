@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe "User show page", type: :system do
+RSpec.describe 'User show page', type: :system do
   fixtures :users, :posts
 
   before do
@@ -42,7 +42,7 @@ RSpec.describe "User show page", type: :system do
 
   it "redirects to user post index page when 'View All Posts' button is clicked" do
     visit user_path(@user)
-    click_link "See all posts"
+    click_link 'See all posts'
 
     expect(page).to have_current_path(user_posts_path(@user))
   end
