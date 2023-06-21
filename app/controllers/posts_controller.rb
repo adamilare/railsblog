@@ -34,7 +34,7 @@ class PostsController < ApplicationController
   private
 
   def selected_user
-    User.find(params[:user_id])
+    User.includes(:posts).find(params[:user_id])
   end
 
   def post_params
