@@ -5,6 +5,7 @@
 
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Blog App ](#-blog-app-)
+  - [Linters](#linters)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -19,6 +20,7 @@
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgement](#)
   - [📝 License ](#-license-)
 
 <!-- PROJECT DESCRIPTION -->
@@ -26,6 +28,10 @@
 # 📖 Rails-blog-app <a name="about-the-project"></a>
 
 **Railsblog** is an app built on Ruby-on-Rails with functionalities to interact with post objects; create and list posts, add comments and likes. The goal of the project is to demonstrate the basic development using RoR, as part of Microverse training modules.
+
+# Linters
+
+[![Linters](https://github.com/adamilare/railsblog/actions/workflows/linters.yml/badge.svg)](https://github.com/adamilare/railsblog/actions/workflows/linters.yml)
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -158,6 +164,16 @@ Feel free to check the [issues page](../../issues).
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and want to support me, please give this project a Star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+
+I would like to thank microverse for giving me the opportunity to show up my skills
+
+and the <a href="https://guides.rubyonrails.org/getting_started.html"> Ruby on rails docs </a>
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
