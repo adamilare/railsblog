@@ -12,7 +12,7 @@
             <ul class="ul-none items">
                 <% @user.recent_posts.each do |post|%>
                     <a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list" data-action="click->interactions#clicked">
-                        <%= render 'shared/post_item', post: post, comments: post.recent_comments %>
+                        <%= render 'shared/post_item', post: post, comments: post.recent_comments, show_comments: true %>
                     </a>
                 <% end %>
             </ul>

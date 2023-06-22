@@ -2,6 +2,6 @@
     <h2>No valid post selected</h2>
 <% else %>
     <section id="post-detail">
-        <%= render 'shared/post_item', post: @post, comments: @post.comments, headed: true %>
+        <%= render 'shared/post_item', post: @post, comments: @post.comments, headed: true, show_comments: true %>
     </section>
 <% end %>

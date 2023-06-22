@@ -18,15 +18,21 @@
     <% unless defined?(headed) %>
         <%= render 'shared/interaction', post: post %>
     <% end %>
-    <% if defined?(comments) && !comments.blank?%>
+    <% if defined?(show_comments) %>
         <hr>
-        <ul class="ul-none comments">
-            <% comments.each do |comment| %>
-                <li><span><%= comment.author.name %>: <%= comment.text%></li>
-            <% end %>
-        </ul>
+        <% if defined?(comments) && !comments.blank?%>
+            <ul class="ul-none comments">
+                <% comments.each do |comment| %>
+                    <li>
+                        <span><%= comment.author.name %>: <%= comment.text%>
+
+                    </li>
+                <% end %>
+            </ul>
+        <%end%>
+
+        <div class="add-comment" id="comment-form-<%= post.id %>">
+            <%= render 'comments/form', comment: @comment, post: post%>
+        </div>
     <% end%>
-    <div class="add-comment" id="comment-form-<%= post.id %>">
-        <%= render 'comments/form', comment: @comment, post: post%>
-  </div>
 </li>
