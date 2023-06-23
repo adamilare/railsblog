@@ -34,6 +34,8 @@ class User < ApplicationRecord
       break random_token unless User.exists?(api_key: random_token)
     end
 
+    puts '', 'api_key ------------', api_key, '-----------------', ''
+
     save
   end
 end
