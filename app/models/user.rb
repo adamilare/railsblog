@@ -13,7 +13,6 @@ class User < ApplicationRecord
 
   after_create :generate_api_key
 
-
   def recent_posts
     posts.order(created_at: :desc).limit(3)
   end
