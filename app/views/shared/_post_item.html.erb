@@ -18,12 +18,28 @@
     <% unless defined?(headed) %>
         <%= render 'shared/interaction', post: post %>
     <% end %>
+
+    <% if defined?(show_comments) && can?(:destroy, post) %>
+        <div>
+        <%= form_with(model: post, method: :delete, url: user_post_path(user, post), class: 'delete-post') do |form| %>
+            <%= form.submit "Delete" %>
+        <% end %> 
+        </div>
+    <%end%>
+
     <% if defined?(show_comments) %>
         <hr>
         <% if defined?(comments) && !comments.blank?%>
             <ul class="ul-none comments">
                 <% comments.each do |comment| %>
                     <li>
+                        <% if defined?(show_comments) && can?(:destroy, post) %>
+                            <div>
+                            <%= form_with(model: comment, method: :delete, url: user_post_comment_path(user, post, comment), class: 'delete-comment') do |form| %>
+                                <%= form.submit "DEL" %>
+                            <% end %> 
+                            </div>
+                        <%end%>
                         <span><%= comment.author.name %>: <%= comment.text%>
 
                     </li>
