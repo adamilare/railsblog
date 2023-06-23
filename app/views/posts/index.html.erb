@@ -1,6 +1,4 @@
 <%= javascript_importmap_tags %>
-<p style="color: green"><%= notice %></p>
-
 <% if @user.blank? %>
     <h2>No valid user selected</h2>
 <% else %>
@@ -12,7 +10,7 @@
             <ul class="ul-none items">
                 <% @user.recent_posts.each do |post|%>
                     <a href="/users/<%= post.author.id %>/posts/<%= post.id %>" class="a-list" data-action="click->interactions#clicked">
-                        <%= render 'shared/post_item', post: post, comments: post.recent_comments %>
+                        <%= render 'shared/post_item', user: @user, post: post, comments: post.recent_comments, show_comments: true %>
                     </a>
                 <% end %>
             </ul>

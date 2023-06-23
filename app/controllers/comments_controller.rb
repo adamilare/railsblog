@@ -5,10 +5,15 @@ class CommentsController < ApplicationController
     @comment.post_id = params[:post_id]
 
     if @comment.save
-      flash[:success] = 'Comment added successfully!'
-      redirect_to request.referrer, notice: 'Comment added successfully '
+      redirect_to request.referrer, notice: 'Comment added successfully'
     else
       flash.now[:error] = 'comment creation failed!'
     end
+  end
+
+  def destroy
+    comment = Comment.find(params[:id])
+    comment.destroy
+    redirect_to request.referrer, notice: 'Comment deleted successfully'
   end
 end
