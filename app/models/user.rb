@@ -11,7 +11,8 @@ class User < ApplicationRecord
   validates :name, :photo, :bio, presence: true
   validates :posts_counter, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
-  # before_validation :set_default_posts_counter
+  after_create :generate_api_key
+
 
   def recent_posts
     posts.order(created_at: :desc).limit(3)
@@ -25,5 +26,14 @@ class User < ApplicationRecord
 
   def set_default_posts_counter
     self.posts_counter ||= 0
+  end
+
+  def generate_api_key
+    self.api_key = loop do
+      random_token = SecureRandom.alphanumeric(20)
+      break random_token unless User.exists?(api_key: random_token)
+    end
+
+    save
   end
 end
