@@ -15,6 +15,7 @@
     - [Install](#install)
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
+    - [Api Instructions](#api-instructions)
     - [Deployment](#deployment)
   - [👥 Author ](#-author-)
   - [🔭 Future Features ](#-future-features-)
@@ -109,6 +110,18 @@ To run all tests, including unit and integration tests, run the following comman
 
 ```
   rails test:all
+```
+
+### Api Instructions
+Steps to get Api Key
+- [ ] Create A user by Sign up
+- [ ] Check for terminal where sever is running
+- [ ] Look for the instruction like below in the terminal
+
+```
+api_key ------------
+Abcasdfgdgsfadsfkh
+-----------------
 ```
 
 ### Deployment
