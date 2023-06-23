@@ -6,11 +6,6 @@ export default class extends Controller {
     const isDescendantOfAddComment =
       event.target.closest('.add-comment') !== null;
 
-    console.log(
-      '---- targetElem -----',
-      targetElement,
-      targetElement.parentElement,
-    );
     if (isDescendantOfAddComment) {
       if (targetElement.classList.contains('comment-text'))
         event.preventDefault();
@@ -39,7 +34,6 @@ export default class extends Controller {
       deleteClasses.contains('delete-post') ||
       deleteClasses.contains('delete-comment')
     ) {
-      console.log('delete ----------', targetElement.parentElement);
       event.preventDefault();
 
       targetElement.parentElement.submit();
